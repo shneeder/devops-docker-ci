@@ -2,9 +2,8 @@
 deployment:
   dockerhub:
     branch: master
-    commands:
-      - curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/shneeder/devops-docker-ci/trigger/3f4fcb0e-5a61-44a5-9b9e-0a107f9cef2f/
-      #- $DOCKER_HUB_TRIGGER
+        commands:
+      - $DOCKER_HUB_TRIGGER
 
 test:
   override:
